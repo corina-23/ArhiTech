@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Corina Stahie">
+    <meta name="keywords" content="pagină web, html, bootstrap, arhitect, design interior, design exterior">
+    <meta name="description"
+        content="pagina de promovare a echipei de arhitecți de la ArhiTech, a serviciilor oferite și a lucrărilor echipei">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--ca sa fie responsive-->
+    <title> ArhiTech </title>
+    <!--documentația bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--fonturi-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        /*font-uri*/
+        body {
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        p {
+            font-size: 0.9rem;
+            font-weight: 100;
+        }
+
+        /*headings*/
+        h2 {
+            color: indianred;
+            text-align: center;
+        }
+
+        .h3 {
+            background-color: bisque;
+        }
+
+        h4 {
+            font-style: italic;
+        }
+
+        /*link-uri externe*/
+        a {
+            color: brown;
+        }
+
+        a:hover {
+            color: rgb(224, 164, 164);
+        }
+
+        /*nav*/
+        nav {
+            background-color: rgb(226, 212, 194);
+        }
+
+        /*logo-ul*/
+        .logo1 {
+            height: 50px;
+            margin: 10px;
+        }
+
+        .logo2 {
+            height: 35px;
+            margin: 7px;
+        }
+
+        /*h1*/
+        .navbar-brand {
+            color: black;
+            text-decoration: none;
+            font-size: 1.25rem;
+            margin-right: 20px;
+        }
+
+        .navbar-brand:hover {
+            text-decoration: underline;
+            color: darksalmon;
+        }
+
+        /*butoane nav*/
+        .nav-link {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+            color: darksalmon;
+        }
+
+        /*carusel+header*/
+        header img {
+            height: 580px;
+            object-fit: cover;
+        }
+
+        /*acordeon*/
+        .accordion-button {
+            --bs-accordion-btn-color: black;
+            --bs-accordion-btn-bg: bisque;
+            --bs-accordion-active-color: aliceblue;
+            --bs-accordion-active-bg: rgb(149, 131, 131);
+            --bs-accordion-btn-focus-border-color: black;
+            --bs-accordion-btn-focus-box-shadow: rgb(149, 131, 131);
+        }
+
+        .accordion-body {
+            background-color: rgb(255, 245, 235);
+        }
+
+        /*carduri*/
+        .card4 {
+            width: 140px;
+            align-self: center;
+            padding-top: 5px;
+        }
+
+        .card {
+            background-color: rgb(255, 248, 238);
+        }
+
+        /*link-uri servicii*/
+        .link {
+            color: black;
+        }
+
+        .link:hover {
+            color: darksalmon;
+        }
+
+        /*portofoliu*/
+        .imagine {
+            height: 40%;
+            object-fit: cover;
+            border: 1px solid rgb(138, 74, 74);
+        }
+
+        /*footer*/
+        footer {
+            background-color: rgb(149, 131, 131);
+        }
+
+        footer img {
+            height: 25px;
+        }
+
+        footer h3 {
+            font-size: 1.25rem;
+        }
+
+        footer p {
+            font-size: 0.8rem;
+            margin: 0px;
+        }
+
+        .copyright {
+            height: 10px;
+            align-self: center;
+            padding-right: 2%;
+        }
+
+        footer a {
+            color: blanchedalmond;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: darksalmon;
+        }
+
+        .align-center {
+            align-self: center;
+            margin: 0px;
+        }
+
+        .middle {
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!--nav-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-0 ps-4 sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="architect.png" class="logo1"
+                    alt="desen simplu cu un omuleț cu cască de constructor și o macheta a unei clădiri">
+            </a>
+            <h1 class="pb-1"> <a class="navbar-brand" href="index.html"> ArhiTech </a> </h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-4"> <a class="nav-link" href="#despre"> Despre noi </a> </li>
+                    <li class="nav-item mx-4"> <a class="nav-link" href="#servicii"> Servicii </a> </li>
+                    <li class="nav-item mx-4"> <a class="nav-link" href="#portofoliu"> Portofoliu </a> </li>
+                    <li class="nav-item mx-4"> <a class="nav-link" href="#contact"> Contact </a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--header+carusel-->
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide carousel-dark">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="carusel/1.jpg" class="d-block w-100"
+                        alt="imagine cu un living și o bucătărie deschisă, cu o canapea albă și perne maro, geamuri mari, o masă cu scaune albe și o lustră futuristă">
+                </div>
+                <div class="carousel-item">
+                    <img src="carusel/2.jpg" class="d-block w-100"
+                        alt="imagine cu o baie luxoasă, cu un tablou abstract, cu un geam imens, cu priveliște la mare">
+                </div>
+                <div class="carousel-item">
+                    <img src="carusel/3.jpg" class="d-block w-100"
+                        alt="imagine cu o bucătărie cu o masă albă și niște lustre futuriste">
+                </div>
+                <div class="carousel-item">
+                    <img src="carusel/4.jpg" class="d-block w-100"
+                        alt="imagine cu o bucătărie deschisă, cu o masă micuță pentru copii, cuptor incorporat și niște scări luminate">
+                </div>
+                <div class="carousel-item">
+                    <img src="carusel/5.jpg" class="d-block w-100"
+                        alt="imagine cu un living cu o canapea colțar gri, o masă de cafea din lemn și multe decorații pe pereți">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+    <!--prima sectiune-->
+    <h2 id="despre" class="pt-3"> Cunoaște echipa </h2>
+    <p class="container py-4">
+        Echipa noastră de arhitecți reprezintă un amestec armonios de creativitate, expertiză și pasiune pentru
+        designul arhitectural.
+        Fiecare membru al echipei aduce cu sine un set distinct de calități și experiențe. Fiecare dintre noi dă
+        dovadă de o continuă
+        căutare a cunoașterii și o actualizare constantă în privința ultimelor tendințe și tehnologii din domeniul
+        arhitecturii.
+        Fiecare membru al echipei aduce idei inovatoare și viziuni originale la masa de proiectare. Comunicarea
+        deschisă și colaborarea sunt
+        fundamentale pentru noi, deoarece ne străduim să înțelegem nevoile clienților noștri și să transpunem aceste
+        informații în soluții
+        arhitecturale durabile și estetice. Împreună, suntem o echipă de arhitecți dedicată, motivată de dorința de
+        a crea spații care nu doar
+        îndeplinesc funcționalitatea, ci și inspiră și îmbogățesc experiența umană prin designul lor inovator și
+        frumos.
+    </p>
+
+    <!--acordeonul-->
+    <div class="accordion accordion-flush container" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed d-block text-center" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Vezi detalii despre echipa noastră!
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <p class="accordion-body">
+                    În ceea ce privește educația, membrii echipei noastre sunt absolvenți cu distincție ai unor
+                    instituții de
+                    învățământ
+                    de renume în domeniul arhitecturii. Unii dintre aceștia au absolvit <a
+                        href="https://www.uauim.ro/facultati/arhitectura/" target="_blank">
+                        Facultatea de Arhitectură la Universitatea Tehnică din București </a>, cu specializări în
+                    proiectare
+                    urbană și sustenabilitate.
+                    Pe lângă expertiza lor tehnică, arhitecții noștri se remarcă prin calități
+                    personale esențiale pentru succesul
+                    în acest domeniu. Unii dintre noi sunt adepții artei contemporane, participând la expoziții și
+                    evenimente
+                    culturale, în timp ce alții recurg la
+                    explorarea arhitecturii tradiționale și istorice pentru inspirație. Există și cei pasionați de
+                    tehnologie și
+                    inovație,
+                    căutând mereu să integreze cele mai recente tehnologii în proiectele noastre. Alți membri au obținut
+                    diplome
+                    la <a
+                        href="https://www.sortiraparis.com/ro/lieux/60147-coala-na-ionala-superioara-de-arte-decorative-ensad"
+                        target="_blank">Școala Națională Superioară de Arte Decorative din Paris</a>, aducând în
+                    echipă o perspectivă internațională și influențe estetice variate.
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed d-block text-center" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Vezi detalii despre fiecare membru!
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <h4 class="pt-3"> Alexandra Stănescu - Arhitect Șef </h4>
+                    <p>
+                        Alexandra, cu o experiență vastă în conducerea proiectelor arhitecturale, este responsabilă
+                        pentru
+                        coordonarea generală a
+                        echipei. Ea lucrează strâns cu clienții, asigurându-se că viziunea lor este înțeleasă și
+                        implementată cu succes.
+                    </p>
+
+                    <h4 class="pt-3"> Andrei Moldoveanu - Arhitect de Proiect </h4>
+                    <p>
+                        Andrei este specialistul în detalii tehnice și coordonează aspectele practice ale proiectului.
+                        Cu
+                        abilități solide în conducerea proiectelor, el asigură că conceptele arhitecturale sunt
+                        translate în
+                        planuri și documentație eficiente.
+                    </p>
+
+                    <h4 class="pt-3"> Elena Popescu - Arhitect de Design </h4>
+                    <p>
+                        Cu o pasiune pentru creație, Elena aduce idei inovatoare în proiecte. Lucrează îndeaproape cu
+                        echipa
+                        pentru a dezvolta concepte creative și a se asigura că designul final reflectă viziunea estetică
+                        dorită.
+                    </p>
+
+                    <h4 class="pt-3"> Radu Ionescu - Specialist IT și Modelare 3D </h4>
+                    <p>
+                        Radu se ocupă de partea tehnologică a proiectului, folosind software-uri avansate pentru a crea
+                        vizualizări 3D și simulări. El aduce elemente de realism și inovație în prezentarea proiectelor.
+                    </p>
+
+                    <h4 class="pt-3"> Ana Dobrescu - Arhitect de Peisaj </h4>
+                    <p>
+                        Ana se specializează în amenajarea spațiilor exterioare. Cu o pasiune pentru natură și design
+                        peisagistic, ea aduce expertiză în crearea spațiilor exterioare funcționale și estetice.
+                    </p>
+
+                    <h4 class="pt-3"> Vlad Popa - Inginer Structural </h4>
+                    <p>
+                        Vlad colaborează cu echipa pentru a asigura soliditatea și siguranța structurii clădirilor. El
+                        oferă
+                        expertiză în detalii structurale și contribuie la planificarea generală a proiectului.
+                    </p>
+
+                    <h4 class="pt-3"> Ioana Marinescu - Inginer MEP </h4>
+                    <p>
+                        Ioana este responsabilă pentru integrarea eficientă a sistemelor mecanice, electrice și de
+                        instalații în
+                        proiect. Colaborează îndeaproape cu arhitecții pentru a asigura funcționalitatea și eficiența
+                        acestor
+                        sisteme.
+                    </p>
+
+                    <h4 class="pt-3"> Mihai Tudor - Arhitect de Detaliu </h4>
+                    <p>
+                        Mihai se ocupă de detalii fine ale designului, inclusiv specificații materiale și detalii
+                        tehnice.
+                        Expert în aspectele practice ale implementării proiectelor, el contribuie la realizarea
+                        conceptelor
+                        în realitate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="border border-danger border-2 opacity-85">
+
+    <!--a doua sectiune-->
+    <h2 id="servicii" class="pt-3"> Serviciile noastre </h2>
+    <p class="container py-4">
+        Această echipă diversificată și talentată aduce împreună expertiza necesară pentru a aborda aspecte variate ale
+        proiectelor arhitecturale, asigurând succesul și calitatea în fiecare etapă a procesului de proiectare și
+        construcție. Împreună, suntem o echipă de arhitecți dedicată, motivată de dorința de a crea spații care nu doar
+        îndeplinesc funcționalitatea, ci și inspiră și îmbogățesc experiența umană prin designul lor inovator și frumos.
+    </p>
+
+    <!--2 coloane-->
+    <div class="container text-center">
+        <div class="row align-items-start">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="servicii/blueprint-in.png" alt="planul interiorului unei case">
+                <h3><a href="#interior" class="link">Servicii de design interior</a></h3>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="servicii/blueprint-out.png" alt="o casă desenată simplu pe o coală de hârtie albă"">
+            <h3><a href=" #exterior" class="link">Servicii de design exterior</a></h3>
+            </div>
+        </div>
+    </div>
+
+    <p class="container pt-4 pb-4">
+        De la ziduri în lucru și spații goale, până la încăperi cu personalitate si spatii exterioare magnifice, care
+        își spun singure povestea,
+        în ritmul vieții celor care își desfășoară activitățile cotidiene acolo, suntem alături de clienții noștri la
+        fiecare pas.
+        Echipa noastră pune accent pe modul în care stilul de viață și stilul estetic, preferințele, nevoile și
+        așteptările clienților noștri
+        sunt integrate într-un concept de design armonios, personalizat, creativ și funcțional deopotrivă. Pe baza
+        informațiilor primite de la clientul nostru,
+        dezvoltăm conceptul general al proiectului, care va include detalii privind stilul dorit, un moodboard cu
+        texturi, imagini, schemă de culori,
+        obiecte și alte detalii care vor da personalitate spațiului.
+    </p>
+
+    <h3 id="interior" class="ps-5 pt-5"> <span class="h3"> -Interior- </span> </h3>
+
+    <!--4 carduri interior-->
+    <div class=" container text-center pt-3">
+        <div class="row align-items-start">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="servicii/kitchen.png" class="card-img-top card4"
+                        alt="imagine desenată simplu cu o insulă de bucătărie și o hotă">
+                    <div class="card-body">
+                        <h4 class="card-title">Bucătării</h4>
+                        <p class="card-text">
+                            Bucătărie deschisă sau rustică, cu blaturi din lemn masiv sau granit negru, gresie
+                            cu aspect de piatră,
+                            iluminat sub dulap și multe altele. Orice ai alege, noi îți facem visele realitate.
+                            Electrocasnicele pot fi selectate în
+                            funcție de preferințe și funcționalități.
+                            Fie ca vrei un aspect prietenos sau un design elegant al bucătăriei tale, noi îți
+                            putem realiza locul perfect pentru a lua masa.
+                        </p>
+                        <span class="badge text-bg-warning">Oferte noi la dulapuri!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="servicii/bathtub.png" class="card-img-top card4"
+                        alt="imagine desenată simplistic cu o cadă cu spumă, un prosop galben și un duș">
+                    <div class="card-body">
+                        <h4 class="card-title">Băi</h4>
+                        <p class="card-text">
+                            Baie modernă sau aerisită, iluminat suspendat sau încorporat, nuanțe
+                            pastelate sau aprinse, orice ai alege, noi putem realiza. Finisajele, precum gresia
+                            sau plăcile de marmură, pot fi adaptate pentru a corespunde stilului tău preferat,
+                            iar mobilierul
+                            și accesoriile pot fi alese pentru a se potrivi cu estetica dorită, oricare ar fi
+                            aceasta.
+                            Îți transformăm baia într-un spațiu atât funcțional, cât și atrăgător.
+                        </p>
+                        <span class="badge text-bg-warning">Oferte noi la gresie!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="servicii/living-room.png" class="card-img-top card4"
+                        alt="imagine desenată simplistic cu o canapea albastră, un tablou cu ramă galbenă și o lampă verde">
+                    <div class="card-body">
+                        <h4 class="card-title">Sufragerii</h4>
+                        <p class="card-text">
+                            Orice atmosfera îți dorești pentru camerele tale de zi, romantic, aerisit, relaxant
+                            sau
+                            orice alt design, noi
+                            putem realiza.
+                            De la parchet deschis sau podea din lemn masiv, la măsuțe de cafea, la canapeaua
+                            visurilor tale, noi
+                            facem ca planurile tale să devină realitate.
+                            Iluminatul, mobilierul și accentele decorative sunt adaptate pentru a se potrivi cu
+                            gusturile și preferințele individuale.
+                        </p>
+                        <span class="badge text-bg-warning">Oferte noi la covoare!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="servicii/bedroom.png" class="card-img-top card4"
+                        alt="imagine desenată simplistic cu un pat cu o pătură albastră și o noptieră cu o lampă galbenă">
+                    <div class="card-body">
+                        <h4 class="card-title">Dormitoare</h4>
+                        <p class="card-text">
+                            Dormitorul este o oază intimă și personală, proiectată cu atenție pentru a oferi
+                            confort și relaxare.
+                            Mobilierul, cum ar fi dulapul sau comoda, poate fi adaptat pentru a îndeplini
+                            nevoile de depozitare ale clientului.
+                            Acesta poate alege între diferite piese de mobilier, culori, texturi, și
+                            accesorii, astfel încât
+                            dormitorul să devină un spațiu cu adevărat personalizat.
+                        </p>
+                        <span class="badge text-bg-warning">Oferte noi la mobilă!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 id="exterior" class="ps-5 pt-5"> <span class="h3"> -Exterior- </span> </h3>
+
+    <!--4 carduri exterior-->
+    <div class=" container text-center pt-3">
+        <div class="row align-items-start">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="servicii/wheelbarrow.png" class="card-img-top card4"
+                        alt="imagine desenată simplu a unei roabe cu pământ, niște flori și niște unelte în ea">
+                    <div class="card-body">
+                        <h4 class="card-title">Amenajări grădini</h4>
+                        <p class="card-text">
+                            Un spațiu verde amenajat estetic și funcțional include o mare diversitate de plante.
+                            Abordarea
+                            armonioasă, cu un circuit natural, nefragmentat
+                            printre toate elementele grădinii, îmbie privitorul și îi încântă simțurile: alei,
+                            terase, garduri vii,
+                            arbuști de jur împrejur și multe altele.
+                        </p>
+                        <button type="button" class="btn btn-warning">Vezi detalii</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="servicii/backyard.png" class="card-img-top card4"
+                        alt="imagine desenată simplu a unui grătar de bbq, cu o masă cu umbrelă, un gard și un copac">
+                    <div class="card-body">
+                        <h4 class="card-title">Spații de relaxare în aer liber</h4>
+                        <p class="card-text">
+                            Spațiile verzi sunt binecunoscute pentru beneficiile lor estetice, ecologice și
+                            psihologice. Ele scot
+                            omul din trepidația cotidiană.
+                            Timpul petrecut în natură este mai mult decât odihnă, deoarece crește măsurabil
+                            puterea de concentrare
+                            și remontează psihicul.
+                        </p>
+                        <button type="button" class="btn btn-warning">Vezi detalii</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="servicii/gardening.png" class="card-img-top card4"
+                        alt="imagine desenată simplu a unei lopeți care sapă o plăntuță mică verde în pământ">
+                    <div class="card-body">
+                        <h4 class="card-title">Flori și copaci</h4>
+                        <p class="card-text">
+                            Dispunem de peste 1.500 de specii și varietăți de plante. Gama de plante cuprinde
+                            arbori și arbuști, de
+                            la dimensiuni mici, până la
+                            peste 10-15 metri înălțime, bonsai, plante cu flori, plante cu forme (topiary),
+                            nenumărate specii de
+                            tufe și ierburi decorative.
+                        </p>
+                        <button type="button" class="btn btn-warning">Vezi detalii</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="servicii/pond.png" class="card-img-top card4"
+                        alt="imagine desenată simplu a unui iaz cu un peștișor în el, niște pietre și iarbă">
+                    <div class="card-body">
+                        <h4 class="card-title">Lacuri și iazuri</h4>
+                        <p class="card-text">
+                            Iazurile sunt unul dintre acele accesorii care imprimă, în mod cert, atmosferă unică
+                            a grădinii. Apă
+                            curgătoare, apă calmă, plante acvatice,
+                            poate un pește sau doi… prezența acestor elemente naturale este liniștitoare și
+                            senină, oferind
+                            beneficii senzoriale și momente de maximă relaxare.
+                        </p>
+                        <button type="button" class="btn btn-warning">Vezi detalii</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="border border-danger border-2 opacity-85">
+
+    <!--a treia sectiune-->
+    <h2 id="portofoliu" class="pt-3"> Portofoliu profesional </h2>
+    <div class="container text-center">
+        <div class="row align-items-start">
+
+            <div class="col-md-6 col-sm-12 py-4">
+                <img src="portofoliu/1.jpg" class="img-thumbnail imagine mb-4"
+                    alt="imagine cu o baie luxoasă, cu un tablou abstract, cu un geam imens, cu priveliște la mare">
+                <p class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    Baie modernă în centrul Clujului, cu un duș cu uși de sticlă transparentă ce contribuie la aspectul
+                    minimalist. Podeaua este placată
+                    cu gresie cu aspect de lemn masiv, aducând un element de lux și durabilitate în spațiu. Chiuveta
+                    montată
+                    pe un blat elegant, realizat dintr-un
+                    material ușor de întreținut, completează zona de spălare. Oglinda suspendată deasupra chiuvetei, cu
+                    iluminare încorporată, asigură un spațiu
+                    funcțional și bine iluminat.
+                </p>
+            </div>
+
+            <div class="col-md-6 col-sm-12 py-4">
+                <img src="portofoliu/2.jpg" class="img-thumbnail imagine mb-4"
+                    alt="imagine cu o bucătărie cu o masă albă și niște lustre futuriste">
+                <p class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    Bucătăria aceasta reprezintă o oază de lumină și eleganță, datorită designului său alb, curat și
+                    bine luminat.
+                    Blaturile din marmură albă oferă o suprafață luxoasă pentru prepararea alimentelor, iar
+                    electrocasnicele de inox
+                    adaugă un aspect modern și funcțional. Iluminatul ambiental este asigurat de lămpile suspendate
+                    deasupra mesei,
+                    oferind un efect vizual plăcut și funcționalitate în timpul serilor relaxante.
+                </p>
+            </div>
+
+            <div class="col-md-6 col-sm-12 py-4">
+                <img src="portofoliu/3.jpg" class="img-thumbnail imagine mb-4"
+                    alt="imagine cu un living și o bucătărie deschisă, cu o canapea albă și perne maro, geamuri mari, o masă cu scaune albe și o lustră futuristă">
+                <p class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    Acest apartament se află într-un complex rezidențial din centrul Brașovului. Zona de lounge este
+                    dominată de o canapea modulară,
+                    cu tapițerie din catifea de culoare neutra, oferind atât confort cât și eleganță, pernele decorative
+                    și
+                    păturile adăugând un element de căldură.
+                    Iluminatul bine plasat, zona de lounge și masa de dining completează designul spațios și versatil,
+                    accentuat de elemente artistice și
+                    o fereastră generoasă ce aduce lumină naturală.
+                </p>
+            </div>
+
+            <div class="col-md-6 col-sm-12 py-4">
+                <img src="portofoliu/4.jpg" class="img-thumbnail imagine mb-4"
+                    alt="imagine cu o baie elegantă și simplă, cu un duș, o cadă și două chiuvete rotunde">
+                <p class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    Baie aerisită din zona rezidențială a Parcului Copou din Iași. Podeaua din gresie mozaicată și
+                    plăcile
+                    de marmură pentru duș adaugă un touch elegant.
+                    Luminile încorporate în tavan creează o atmosferă relaxantă și spațioasă. Dușul prezintă finisaje cu
+                    plăci moderne și un sistem de duș cu
+                    efect de ploaie pentru o experiență revigorantă. Cada, chiuvetele și spațiul de depozitare sunt
+                    alese cu
+                    atenție pentru a crea un spațiu estetic și funcțional.
+                </p>
+            </div>
+
+            <div class="col-md-6 col-sm-12 py-4">
+                <img src="portofoliu/5.jpg" class="img-thumbnail imagine mb-4"
+                    alt="imagine cu o bucătărie deschisă, cu o masă micuță pentru copii, cuptor incorporat și niște scări luminate">
+                <p class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    Această bucătărie rustică, cu blaturi, masă și scaune din lemn de o nuanță deschisă își are locația
+                    în
+                    zona Palatului Culturii din Iași.
+                    Mobilierul de depozitare este discret integrat în design, contribuind la păstrarea ordinii și
+                    esteticii
+                    spațiului. De asemenea,
+                    corpurile superioare deschise completează și ele aspectul casual și prietenos al bucătăriei.
+                </p>
+            </div>
+
+            <div class="col-md-6 col-sm-12 py-4">
+                <img src="portofoliu/6.jpg" class="img-thumbnail imagine mb-4"
+                    alt="imagine cu o sufragerie, cu o masă cu scaune gri, două canapele albe în fața unei mese de cafea, două beanbag-uri portocalii în fața unei biblioteci și un balcon">
+                <p class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    Acest apartament din centrul Piatra-Neamțului emană modernitate și confort. Detaliile din lemn de
+                    nuc
+                    ale bibliotecii aduc o atmosferă
+                    rafinată sufrageriei. Spațiul include o masă pentru întreaga familie, o zonă de relaxare cu
+                    canapele,
+                    fotolii și o masă de cafea
+                    și accente artistice, oferind confort și funcționalitate într-un design bine echilibrat.
+                </p>
+            </div>
+
+            <div class="col-md-6 col-sm-12 py-4">
+                <img src="portofoliu/7.jpg" class="img-thumbnail imagine mb-4"
+                    alt="imagine cu un living cu o canapea colțar gri, o masă de cafea din lemn și multe decorații pe pereți">
+                <p class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    Acești pereți cu un tapet minimalist și drăguț se află într-un apartament mic din Piatra-Neamț. Un
+                    covor cu un design subtil definește
+                    vizual zona de lounge într-un mod coeziv. Decorul este completat cu elemente artistice precum
+                    tablouri
+                    abstracte și
+                    plante de interior, aducând un echilibru între funcționalitate, estetică și calitatea vieții în
+                    acest
+                    living maximalist.
+                </p>
+            </div>
+
+            <div class="col-md-6 col-sm-12 py-4">
+                <img src="portofoliu/8.jpg" class="img-thumbnail imagine mb-4"
+                    alt="imagine cu un hol, cu pânze pe pereți, cu niște scări și o noptieră cu o lampă aprinsă">
+                <p class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    Acest hol realizat de arhitecții noștri în sectorul 2 al capitalei emană modernitate și confort.
+                    Pereții
+                    în gri deschis creează un fundal neutru
+                    pentru elementele decorative. Designul minimalist este însă completat de obiecte de artă
+                    contemporană și
+                    de tablouri artistice, ce adaugă
+                    un element de personalitate spațiului.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <hr class="border border-danger border-2 opacity-85">
+
+    <!--a patra sectiune-->
+    <h2 id="contact" class="pt-3"> Contactează-ne </h2>
+
+    <div class="container">
+        <p class="pb-2">
+            Specialiștii noștri sunt la un click distanță!
+        </p>
+        <p class="pb-2">
+            Contactează-ne pentru a începe o colaborare în care viziunea
+            ta devine realitate. Suntem aici pentru a te ghida de la concept
+            la construcție, aducând idei proaspete și soluții personalizate pentru proiectele tale.
+            Fie că este vorba despre designul unei locuințe, spațiu comerciale sau proiecte de planificare
+            urbană, la ArhiTech suntem gata să îți oferim expertiza noastră și pasiunea pentru arhitectură.
+        </p>
+        <p> Ne poți contacta direct:</p>
+
+        <ul class="list-group list-group-flush">
+            <li class="d-flex list-group-item middle">
+                <img src="contact/phone-call.png" alt="imagine simplă cu un telefon sunând" class="logo1">
+                <p class="align-center"> La numărul de telefon: 0212 345 678 </p>
+            </li>
+
+            <li class="d-flex list-group-item middle">
+                <img src="contact/mail.png" alt="imagine simplă cu iconița de e-mail" class="logo1">
+                <p class="align-center"> Pe email: info@arhitech.com </p>
+            </li>
+
+            <li class="d-flex list-group-item middle">
+                <img src="contact/pin.png" alt="imagine simplă cu iconița de locație" class="logo1">
+                <p class="align-center"> La adresă: Strada General Traian Moșoiu 71, Cluj-Napoca </p>
+            </li>
+        </ul>
+
+        <p class="pt-3"> Sau completează formularul de mai jos pentru a ne contacta. Lasă-ne întrebările tale,
+            curiozități sau feedback! </p>
+    </div>
+
+    <form class="py-3 container">
+        <div class="row mb-3">
+            <label for="last name" class="col-md-3 col-sm-2 col-form-label">Nume:</label>
+            <div class="col-md-9 col-sm-10">
+                <input type="text" class="form-control" id="last name">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="first name" class="col-md-3 col-sm-2 col-form-label">Prenume:</label>
+            <div class="col-md-9 col-sm-10">
+                <input type="text" class="form-control" id="first name">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="inputEmail3" class="col-md-3 col-sm-2 col-form-label">Email:</label>
+            <div class="col-md-9 col-sm-10">
+                <input type="email" class="form-control" id="email">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="formGroupExampleInput2" class="col-md-3 col-sm-2 col-form-label">Mesajul tău:</label>
+            <div class="col-md-9 col-sm-10">
+                <input type="text" class="form-control clasa" id="mesaj">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-secondary">Trimite</button>
+    </form>
+
+    <!--footer-->
+    <footer class="py-3">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-3 col-md-6 col-sm-12 py-2 d-flex middle">
+                    <a href="index.html">
+                        <img src="architect.png" class="logo2 me-4"
+                            alt="desen simplu cu un omuleț cu cască de constructor și o macheta a unei clădiri">
+                    </a>
+                    <h3 class="align-center"> <a href="index.html"> ArhiTech </a> </h3>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 py-2 align-center d-flex middle">
+                    <img src="footer/copyright.png" alt="imagine cu litera C într-un cerc, semnul de copyright"
+                        class="copyright">
+                    <p> Copyright - Corina 2023 </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 py-2 align-center d-flex middle">
+                    <img src="footer/phone-call.png" alt="imagine simplă cu un telefon sunând" class="px-3">
+                    <p> Telefon: 0212 345 678 </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12 py-2 align-center">
+                    <ul class="d-flex gap-3 list-unstyled m-0 middle">
+                        <li><a href="https://www.facebook.com/fspac.ubb" target="_blank">
+                                <img src="footer/facebook.png" alt="imagine simplă a iconiței de la Facebook">
+                            </a>
+                        </li>
+                        <li><a href="https://www.instagram.com/fspac/" target="_blank">
+                                <img src="footer/instagram.png" alt="imagine simplă a iconiței de la Instagram">
+                            </a>
+                        </li>
+                        <li><a href="https://www.youtube.com/@JungleSurvival" target="_blank">
+                                <img src="footer/youtube.png" alt="imagine simplă a iconiței de la YouTube">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
